@@ -8,14 +8,13 @@ The objective is simple — slide tiles, merge numbers, and reach the **2048 til
 ## 🎮 Live Demo
 
 🔗 [Play Now](https://playgautamsingh2048.vercel.app)  
-*(Replace this link after deployment.)*
+
 
 ---
 
 ## 📸 Preview
 
-*(Add a screenshot here once deployed)*  
-Example:
+
 
 ![2048 Game Preview](./screenshot.png)
 
@@ -55,10 +54,3 @@ The game ends when:
 | Vercel              | Deployment platform        |
 
 ---
-
-## 🚀 Getting Started
-
-### 1️⃣ Clone the repository
-```bash
-git clone https://github.com/your-username/2048-game.git
-cd 2048-game
