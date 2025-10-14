@@ -1,16 +1,64 @@
-# React + Vite
+# 🧩 2048 Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web-based implementation of the classic **2048 puzzle game** built using **React + Tailwind CSS**.  
+The objective is simple — slide tiles, merge numbers, and reach the **2048 tile**!
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎮 Live Demo
 
-## React Compiler
+🔗 [Play Now](https://playgautamsingh2048.vercel.app)  
+*(Replace this link after deployment.)*
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📸 Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*(Add a screenshot here once deployed)*  
+Example:
+
+![2048 Game Preview](./screenshot.png)
+
+---
+
+## 🧠 Game Objective
+
+Combine tiles with the same number to reach **2048**.  
+Each move spawns a new tile (2 or 4) at a random empty position.  
+The game ends when:
+- You reach **2048** ✅  
+- Or no more moves are possible ❌
+
+---
+
+## ⚙️ Features
+
+- ✅ 4x4 default board
+- 🧠 Functional movement with arrow keys
+- 🔁 Merging logic for identical tiles
+- 🎲 Random tile generation (2 or 4)
+- 🧮 Dynamic score tracking
+- ♻️ Restart game button
+- 🖥️ Responsive, smooth UI with React
+- 🚀 Deployable via Vercel
+
+---
+
+## 🧩 Technologies Used
+
+| Technology         | Purpose                    |
+|---------------------|----------------------------|
+| React (Vite)        | Frontend framework         |
+| Tailwind CSS        | Styling                    |
+| JavaScript (ES6)    | Game logic                 |
+| HTML5 / CSS3        | Structure and presentation |
+| Vercel              | Deployment platform        |
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/your-username/2048-game.git
+cd 2048-game
