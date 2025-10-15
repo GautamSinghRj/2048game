@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import GameArea from "./components/gamearea"
-import BoardCreation, { move } from "./utils/gamelogic";
+import BoardCreation, {isGameOver, move } from "./utils/gamelogic";
 
 
 export default function App() {
