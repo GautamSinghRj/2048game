@@ -6,6 +6,7 @@ import BoardCreation, { move } from "./utils/gamelogic";
 export default function App() {
   const [size, setSize] = useState(4)
   const [score, setScore] = useState(0)
+  const [win, setWin] = useState(false)
   const [board, setBoard] = useState(BoardCreation(size))
 
   const handleKey = (event) => {
@@ -16,25 +17,35 @@ export default function App() {
     }
   }
 
-  const restart = (newSize=size) => {
+  const restart = (newSize = size) => {
     setBoard(BoardCreation(newSize))
     setScore(0)
   }
   const divRef = useRef(null)
 
   useEffect(() => {
+    const isPresent = board.some(row => row.includes(2048))
+    if(isPresent)setWin(true)
+  }, [board])
+
+  useEffect(() => {
     divRef.current?.focus();
   }, [])
 
-  useEffect(()=>{
+  useEffect(() => {
     restart(size)
-  },[size])
+  }, [size])
 
   return (
     <div className="flex flex-col justify-center items-center gap-8 h-screen" ref={divRef} tabIndex={0} onKeyUp={handleKey}>
       <div className="text-5xl font-black text-[#9c8b7c]">
         2048
       </div>
+      {win && (
+        <div className="text-4xl font-bold text-green-600 mb-4 animate-bounce">
+          🎉 You Win! 🎉
+        </div>
+      )}
       <div className="flex items-center gap-3">
         <label className="text-[#9c8b7c] text-xl font-semibold">Board Size:</label>
         <input
@@ -51,7 +62,7 @@ export default function App() {
         {score}
       </div>
       <button
-        onClick={()=>restart(size)}
+        onClick={() => restart(size)}
         className="px-8 py-4 bg-[#9c8b7c] text-white text-xl rounded-xl hover:bg-[#837567]"
       >
         Retry

@@ -56,11 +56,11 @@ export function move(board, key) {
         bd= switchRight(switchRight(moveLeft(switchRight(switchRight(bd)))))
     }
 
-    if (key == "ArrowUp") {
+    if (key == "ArrowDown") {
         bd=switchLeft(moveLeft(switchRight(bd)))
     }
 
-    if (key == "ArrowDown") {
+    if (key == "ArrowUp") {
         bd=switchRight(moveLeft(switchLeft(bd)))
     }
     randomTile(bd)
