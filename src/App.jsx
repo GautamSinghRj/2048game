@@ -21,6 +21,8 @@ export default function App() {
   const restart = (newSize = size) => {
     setBoard(BoardCreation(newSize))
     setScore(0)
+    setLose(false)
+    setWin(false)
   }
   const divRef = useRef(null)
 
