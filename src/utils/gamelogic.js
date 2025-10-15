@@ -4,6 +4,27 @@ export default function BoardCreation(size = 4) {
     randomTile(board);
     return board;
 }
+export function checkZeroes(board) {
+    return board.some(row => row.includes(0))
+}
+
+export function checkMerge(board) {
+    const size = board.length;
+    for (let i = 0; i < size; i++) {
+        for (let j = 0; j < size; j++) {
+            if (j < size - 1 && board[i][j] === board[i][j + 1]) return true;
+            if (i < size - 1 && board[i][j] === board[i + 1][j]) return true;
+        }
+    }
+    return false;
+}
+
+export function isGameOver(board) {
+    if (checkZeroes(board)) return false;
+    if (checkMerge(board)) return false;
+    return true
+}
+
 
 export function randomTile(board) {
     const emptyTiles = []
