@@ -16,7 +16,7 @@ The objective is simple — slide tiles, merge numbers, and reach the **2048 til
 
 
 
-![2048 Game Preview](./screenshot.png)
+![2048 Game Preview](./Screenshot_20251015_082841.png)
 
 ---
 
