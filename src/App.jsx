@@ -7,6 +7,7 @@ export default function App() {
   const [size, setSize] = useState(4)
   const [score, setScore] = useState(0)
   const [win, setWin] = useState(false)
+  const [lose, setLose] = useState(false)
   const [board, setBoard] = useState(BoardCreation(size))
 
   const handleKey = (event) => {
@@ -26,6 +27,7 @@ export default function App() {
   useEffect(() => {
     const isPresent = board.some(row => row.includes(2048))
     if(isPresent)setWin(true)
+    if (isGameOver(board)) setLose(true)
   }, [board])
 
   useEffect(() => {
@@ -42,8 +44,13 @@ export default function App() {
         2048
       </div>
       {win && (
-        <div className="text-4xl font-bold text-green-600 mb-4 animate-bounce">
+        <div className="text-4xl font-bold text-[#9c8b7c] mb-4 animate-bounce">
           🎉 You Win! 🎉
+        </div>
+      )}
+      {lose && (
+        <div className="text-4xl font-bold text-[#9c8b7c] mb-4 animate-bounce">
+          Game Over
         </div>
       )}
       <div className="flex items-center gap-3">
